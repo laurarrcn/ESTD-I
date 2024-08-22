@@ -1,0 +1,37 @@
+
+
+#include <stdio.h>
+#define n 10
+
+//busca linear
+int buscaLinear(int *v, int elem){
+    for(int i = 0 ; i < n; i++){
+        if(v[i] == elem){
+            return i;
+        }
+        return -1;
+    }
+}
+
+void imprimir(int *v){
+    printf("Vetor: ");
+    for(int i =0; i < n; i++){
+        printf(" %d | ", v[i]);
+    }
+}
+
+int main()
+{
+    printf("Hello World\n");
+    int v[n] = {23, 4, 67, -8, 54, 90, 21, 72, 3, -19};
+    
+    imprimir(v);
+    
+    int resultado = buscaLinear(v,90);
+    
+    buscaLinear(v, 90);
+    
+    printf("\n resultado: %d", resultado);
+
+    return 0;
+}
